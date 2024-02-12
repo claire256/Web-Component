@@ -1,7 +1,7 @@
 const template = document.createElement("template");
 template.innerHTML =`
    <style>
-   section{
+   section {
     width:1000px;  
     background-color: #E5E5F5;
     height: 100vh;
@@ -88,6 +88,7 @@ template.innerHTML =`
    span{
        font-size: 40px;
    }
+
    </style>
    <section>
    <div class="container">
@@ -100,12 +101,12 @@ template.innerHTML =`
    <div class="bar"> </div>
    <p class="complete">33% complete</p>
    <div class="check">
-   <label><input type="checkbox" class="box"/>Meditation</label><br>
+   <label><input type="checkbox" class="box" checked/>Meditation</label><br>
    <label><input type="checkbox"/>Pick up Ann</label><br>
    <label><input type="checkbox"/>Set up meeting with Jay</label><br>
    <label><input type="checkbox"/>Finish Daily Ui</label><br>
    <label><input type="checkbox"/>Second edits on article</label><br>
-   <label><input type="checkbox"/>Email Chris</label><br>
+   <label><input type="checkbox" checked/>Email Chris</label><br>
    </div>
    <p>Pull from recurring lists</p>
    <div class="sec-two">
@@ -125,6 +126,21 @@ class TodoComponent extends HTMLElement{
         super()
         const shadow = this.attachShadow({mode: "open"})
         shadow.append(template.content.cloneNode(true))
+        shadow.append(styleTemplate.content.cloneNode(true))
+        this.checkbox = shadow.querySelector("input");
+        // this.shadow.adoptedStyleSheets = [styles]
+    }
+    
+    static get observedAttributes(){
+        return["checked"]
+    }
+    
+    attributeChangedCallback(name, oldvalue, newValue){
+        if(name === "checked")this.updateChecked(newValue)
+    }
+
+    updateChecked(value){
+     this.checkbox.checked = value!= null && value !== 'false'
     }
 }
 customElements.define("todo-list", TodoComponent)
