@@ -23,8 +23,8 @@ template.innerHTML =`
        display:flex;
        flex-direction: column
    }
-   input .box{
-   
+   label .box{
+      font-size: 2em;
      }
    p{
     font-family: Arial, Helvetica, sans-serif;
@@ -59,7 +59,13 @@ template.innerHTML =`
    .bar{
        width: 90%;
        height: 10px;
-       border: solid black 1px;
+       border: solid grey 1px;
+   }
+   .bar .fill{
+       width: 30%;
+       background: #B3B3EF;
+       height: 100%;
+       border-right-radius: 10px;
    }
    h1{
        color: #7F7F7F;
@@ -98,7 +104,7 @@ template.innerHTML =`
    <h1>TODAY</h1>
    <button id="add">+</button>
    </div>
-   <div class="bar"> </div>
+   <div class="bar"><div class="fill"></div></div>
    <p class="complete">33% complete</p>
    <div class="check">
    <label><input type="checkbox" class="box" checked/>Meditation</label><br>
