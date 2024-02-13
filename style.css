@@ -3,4 +3,24 @@ body{
     align-items: center;
     justify-content: center;
     background-color:black;
-}
+    overflow: hidden;
+} 
+
+ section {
+    width:69%;  
+    background-color: #E5E5F5;
+    height: 100vh;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .container{
+       width:300px;  
+       background-color: white;  
+       height: 650px;
+       box-shadow:10px 15px 25px 0px #D3CEEB;
+    }
+    .wrapper{
+       padding-left: 20px 
+    } 

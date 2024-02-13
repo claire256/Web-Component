@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,35 @@
     <title>todo list</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <todo-list></todo-list>
-    <!-- <todo-list></todo-list> -->
 
- <script src="TodoList.js"></script> 
- <script src="TodoListStyles.js"></script>  
+<body>
+    <section>
+        <div class="container">
+            <div class="wrapper">
+        <header-comp></header-comp>
+        <progress-bar percent="18"></progress-bar>
+
+        <check-box checked>Meditation</check-box>
+        <check-box>Pick up Ann</check-box>
+        <check-box>Set up meeting with Jay</check-box>
+        <check-box>Finish Daily Ui</check-box>
+        <check-box>Second edits on article</check-box>
+        <check-box>Email Chris</check-box>
+        
+        <text-comp>Pull from recurring lists</text-comp>
+
+        <button-comp color="#F5ED84">Daily</button-comp>
+        <button-comp color="#B5EA81">Weekly</button-comp><br>
+        <button-comp color="#F3A9A9">Monthly</button-comp>
+        <button-comp color="#B3B3EF">occasional</button-comp>
+        </div>
+        </div>
+    </section>
+    <script src="Header.js" defer></script>
+    <script src="ProgressBar.js" defer></script>
+    <script src="CheckBox.js" defer></script>
+    <script src="Button.js" defer></script>
+    <script src="Text.js" defer></script>
 </body>
+
 </html>
