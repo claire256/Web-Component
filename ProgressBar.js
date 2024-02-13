@@ -16,7 +16,7 @@ class ProgressBarComponent extends HTMLElement{
        border-radius: 10px;
        }
       .bar .fill{
-       width: 0%;
+       width: 0;
        background: #B3B3EF;
        height: 100%;
        border-right-radius: 10px;
@@ -53,7 +53,6 @@ class ProgressBarComponent extends HTMLElement{
             this.shadowRoot.querySelector(".fill").style.width = `${this.percent}%`
         }
     }
-
-    
 }
+
 customElements.define("progress-bar", ProgressBarComponent)
