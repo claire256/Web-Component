@@ -8,7 +8,7 @@ class TextComponent extends HTMLElement{
          font-family: Arial, Helvetica, sans-serif;
          font-weight: 100;
          color: #A8A8A8;
-         font-size: 14px;
+         font-size: 15px;
          }         
         </style>
          <p><slot></slot></p>
